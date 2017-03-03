@@ -25,7 +25,7 @@ ProposalListComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'proposal-list',
-        templateUrl: 'propsal-list.component.html'
+        templateUrl: 'proposal-list.component.html'
     })
 ], ProposalListComponent);
 exports.ProposalListComponent = ProposalListComponent;
