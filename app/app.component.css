@@ -27,5 +27,5 @@
 }
 
 .dropdown-item.active {
-  background-color: #9e9cce;
+  background-color: #9e9cce !important;
 }
