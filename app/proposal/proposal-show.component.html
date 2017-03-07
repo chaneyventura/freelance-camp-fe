@@ -1,9 +1,21 @@
 <div class="container">
-  <div class="card proposal-card">
-    <h1>Proposal Show</h1>
-
+  <div *ngIf="proposal" class="card proposal-card">
+    <h1>{{ proposal.customer }}</h1>
     <div>
-      The id for this proposal is: {{ id }}
+        <p>Hi {{ proposal.customer }},</p>
+
+        <p>It was a pleasure meeting with you to discuss your marketing needs. As a full-service social media marketing company, we provide integrated marketing solutions to meet your business goals.  Please feel free to check out our website <a href="{{ proposal.portfolio_url }}" target="_blank">here</a>.</p>
+
+        <p>As we discussed, we will be utilizing {{proposal.tools}}, and possibly occasional other outlets in order to produce the best results for your business. We know running a business is not easy; as you partner with JT Social, you are free to focus on the day-to-day structure of your business while we produce the marketing content and results for you.</p>
+
+        <p>Ensuring that you are fully satisfied with our service is a top priority; personal contact with your marketing manager is encouraged.</p>
+
+        <p> To meet and exceed the goals we discussed, you will receive {{ proposal.estimated_hours }} dedicated social hours per month. With our agreed upon contract of {{ proposal.hourly_rate | currency:'USD':true:'.0' }} per hour, the monthly package total is {{ proposal.hourly_rate * proposal.estimated_hours | currency:'USD':true:'.0' }}.</p>
+
+        <p>Thank you so much for choosing JT Social! I look forward to our partnership.</p>
+        <p>Best regards,</p>
+        <p>{{ proposal.manager_name }}</p>
+        <p><a href="mailto:{{ proposal.manager_email }}?subject=Proposal">{{ proposal.manager_email }}</a></p>
     </div>
   </div>
 </div>
